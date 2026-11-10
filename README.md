@@ -9,6 +9,8 @@ The strategy combines a defensive **Shield (47%)** with an offensive, high-beta 
 | 🛡️ Shield (defensive) | 47% | `VOO` 25%, `LLY` 12%, `LMT` 10% |
 | ⚔️ Spear (offensive) | 53% | `NVDA` 15%, `DELL` 10%, `WDC` 10%, `GEV` 10%, `CLSK` 8% |
 
+**Live demo:** https://rk3bdkp5mpgddrd25qgnsr.streamlit.app/ — change any weight, date or risk-free rate and the backtest recomputes.
+
 ## What it computes
 
 From real market data (Yahoo Finance via `yfinance`) — nothing is hard-coded:
