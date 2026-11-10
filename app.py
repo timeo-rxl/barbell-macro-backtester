@@ -209,13 +209,17 @@ st.dataframe(pd.DataFrame(leg_rows), use_container_width=True, hide_index=True)
 st.subheader("Holdings")
 holding_rows = []
 for t in TICKERS:
-    total_ret = prices[t].iloc[-1] / prices[t].iloc[0] - 1
+    # GEV only started trading in April 2024, so its first price in a window
+    # starting earlier is NaN — use its first valid price instead.
+    first_price = prices[t].dropna().iloc[0]
+    last_price = prices[t].iloc[-1]
+    total_ret = last_price / first_price - 1
     holding_rows.append(
         {
             "Ticker": t,
             "Leg": LEG[t],
             "Weight": pct(weights[t]),
-            "Price first → last": f"${prices[t].iloc[0]:.2f} → ${prices[t].iloc[-1]:.2f}",
+            "Price first → last": f"${first_price:.2f} → ${last_price:.2f}",
             "Total return": pct(total_ret),
         }
     )

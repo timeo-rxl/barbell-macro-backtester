@@ -36,13 +36,16 @@ python barbell_backtester.py --start 2024-01-01 --output equity_curve.csv
 
 ## Example output
 
+Verified run, H1 2025 (2025-01-01 → 2025-06-30, 120 trading days):
+
 ```
 [PORTFOLIO - BARBELL]
-  - Annualised return    :   XX.XX% (CAGR)
-  - Annualised vol       :   XX.XX%
-  - Sharpe ratio         :    X.XX (Rf = 3.5%)
-  - Max drawdown         :  -XX.XX%
-  - Beta vs SPY          :    X.XX
+  - Total return         :   17.00%
+  - Annualised return    :   39.06% (CAGR)
+  - Annualised vol       :   36.21%
+  - Sharpe ratio         :    0.98 (Rf = 3.5%)
+  - Max drawdown         :  -25.44%
+  - Beta vs SPY          :    1.27
 ```
 
 ## Disclaimer
